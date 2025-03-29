@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enlaces para Lilia</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background-color: #fefefe;
+      color: #333;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.8em;
+      margin-bottom: 30px;
+    }
+    .link-item {
+      background: #f5f5f5;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .link-name {
+      font-size: 1.1em;
+      color: #007bff;
+      text-decoration: none;
+      flex: 1;
+    }
+    .copy-btn {
+      background: none;
+      border: none;
+      font-size: 1.3em;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    .copied {
+      color: green;
+      font-size: 0.9em;
+      margin-left: 10px;
+    }
+    .separador {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Enlaces útiles para Lilia</h1>
+
+  <div class="link-item">
+    <a class="link-name" href="https://acubavoy.github.io/cuban_marketplace_catalogo.html" target="_blank">Todos los productos Day Ready</a>
+    <button class="copy-btn" onclick="copiar(this, 'https://acubavoy.github.io/cuban_marketplace_catalogo.html')">📋</button>
+  </div>
+  <div class="link-item">
+    <a class="link-name" href="https://acubavoy.github.io/Planta_Electricas_v1_MEJORADO.html" target="_blank">Plantas Eléctricas Day Ready</a>
+    <button class="copy-btn" onclick="copiar(this, 'https://acubavoy.github.io/Planta_Electricas_v1_MEJORADO.html')">📋</button>
+  </div>
+  <div class="link-item">
+    <a class="link-name" href="https://acubavoy.github.io/Televisores.html" target="_blank">Televisores Day Ready</a>
+    <button class="copy-btn" onclick="copiar(this, 'https://acubavoy.github.io/Televisores.html')">📋</button>
+  </div>
+  <div class="link-item">
+    <a class="link-name" href="https://acubavoy.github.io/Motocicletas.html" target="_blank">Motores Day Ready</a>
+    <button class="copy-btn" onclick="copiar(this, 'https://acubavoy.github.io/Motocicletas.html')">📋</button>
+  </div>
+  <div class="link-item">
+    <a class="link-name" href="https://acubavoy.github.io/Motocicletas.html" target="_blank">Autos Day Ready</a>
+    <button class="copy-btn" onclick="copiar(this, 'https://acubavoy.github.io/Motocicletas.html')">📋</button>
+  </div>
+
+  <div class="separador"></div>
+
+  <div class="link-item">
+    <a class="link-name" href="https://acubavoy.info/envios" target="_blank">Paquetes Remitentes y Receptor</a>
+    <button class="copy-btn" onclick="copiar(this, 'https://acubavoy.info/envios')">📋</button>
+  </div>
+  <div class="link-item">
+    <a class="link-name" href="https://acubavoy.info/ata" target="_blank">Modelo Solicitud Boleto Aéreo</a>
+    <button class="copy-btn" onclick="copiar(this, 'https://acubavoy.info/ata')">📋</button>
+  </div>
+  <div class="link-item">
+    <a class="link-name" href="https://acubavoy.info/pasaporte" target="_blank">Servicios de Gestión de Pasaporte</a>
+    <button class="copy-btn" onclick="copiar(this, 'https://acubavoy.info/pasaporte')">📋</button>
+  </div>
+  <div class="link-item">
+    <a class="link-name" href="https://acubavoy.info/autorizo-menor" target="_blank">Autorizo Legalizar Pasaporte del Menor</a>
+    <button class="copy-btn" onclick="copiar(this, 'https://acubavoy.info/autorizo-menor')">📋</button>
+  </div>
+
+  <div class="separador"></div>
+
+  <div class="link-item">
+    <a class="link-name" href="https://www.acubavoy.com/renta-de-autos-en-cuba" target="_blank">Reservar Auto en la Página Web</a>
+    <button class="copy-btn" onclick="copiar(this, 'https://www.acubavoy.com/renta-de-autos-en-cuba')">📋</button>
+  </div>
+  <div class="link-item">
+    <a class="link-name" href="https://acubavoy.info/downpayment" target="_blank">Pago el Downpayment de Auto</a>
+    <button class="copy-btn" onclick="copiar(this, 'https://acubavoy.info/downpayment')">📋</button>
+  </div>
+
+  <div class="separador"></div>
+
+  <div class="link-item">
+    <a class="link-name" href="https://reviewthis.biz/A_Cuba-Voy-LLC" target="_blank">Reviews en Google</a>
+    <button class="copy-btn" onclick="copiar(this, 'https://reviewthis.biz/A_Cuba-Voy-LLC')">📋</button>
+  </div>
+  <div class="link-item">
+    <a class="link-name" href="https://acubavoy.info/facebook" target="_blank">Reviews en Facebook</a>
+    <button class="copy-btn" onclick="copiar(this, 'https://acubavoy.info/facebook')">📋</button>
+  </div>
+
+  <script>
+    function copiar(btn, texto) {
+      navigator.clipboard.writeText(texto).then(() => {
+        const mensaje = document.createElement('span');
+        mensaje.textContent = 'Copiado con éxito';
+        mensaje.className = 'copied';
+        btn.parentNode.appendChild(mensaje);
+        setTimeout(() => mensaje.remove(), 2000);
+      });
+    }
+  </script>
+</body>
+</html>
